@@ -1,9 +1,7 @@
-// 2. Dado un número indicar si es par o impar y si es mayor de 10.
+// 3. Construir el algoritmo para determinar el voltaje de un circuito a partir de la resistencia y la intensidad de corriente.
 
-let numero = (prompt(`Ingrese un número`));
-const parOImpar = () => {
-    if (numero % 2 == 0) console.log(`Su número es par`);
-    else console.log(`Su número es impar`);
-    if (numero > 10) console.log(`y es mayor a 10`);
-};
-parOImpar();
+console.log(`Segun la ley de Ohm El voltaje es V = I * R => (voltaje) = (intensidad) * (resistencia)`);
+let variableR = prompt(`Ingrese el valor de la resistencia en [Ohmios]: `);
+let variableI = prompt(`Ingrese el valor de la intensidad de la corriente en [Amperios]: `);
+let voltaje = variableI * variableR 
+console.log(`El voltaje es ${voltaje} [Voltios]`)
