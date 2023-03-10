@@ -1,19 +1,10 @@
-// 4. Construir el algoritmo que solicite el nombre y edad de 3 personas y determine el nombre de la persona con mayor edad.
+// 5. Construir el algoritmo que lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia, en caso contrario, informar el producto y la división del primero respecto al segundo.
 
-let nombres = [];
-let edades = [];
+let num1 = parseFloat(prompt(`Ingrese un número`));
+let num2 = parseFloat(prompt(`Ingrese otro número`));
 
-for(i = 0; i < 3; i++ ){
-    let nombre = prompt(`Ingrese el nombre: `);
-    let edad = parseInt(prompt(`Ingrese la edad`));
-    nombres.push(nombre);
-    edades.push(edad);
+const operaciones = () =>{
+    if (num1 > num2) return console.log(`Como ${num1} es mayor que ${num2}: Su suma es ${num1 + num2} y la diferencia ${num1 - num2}`);
+    else console.log(`Como ${num1} es menor que ${num2}: El producto es ${num1*num2} y la división es ${num1/num2}`);
 };
-// Este ciclo for se encarga de solicitar los 3 valores de edad de las personas y de almacenar su edad
-
-console.log(nombres);
-console.log(edades);
-
-let posicionMax = edades.indexOf(Math.max(...edades));
-console.log(`${nombres[posicionMax]} es la persona mayor (Tiene ${edades[posicionMax]} años).`);
-// posicionMax me retorna el valor de la edad mayor, y indexOf un entero con la posición. Como el nombre y la edad tienen la misma posición puedo usar este valor para encontrar el nombre de la persona con la edad mayor. Sé que esto se puede solucionar con objetos (creo) pero aún no veo ese tema.
+operaciones()
