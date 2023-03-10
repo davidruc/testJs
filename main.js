@@ -1,13 +1,12 @@
-// 7. Programa que pida el ingreso del nombre y precio de un artículo y la cantidad que lleva el cliente. Mostrar lo que debe pagar el comprador en su factura.
+// 8. Programa que Ingrese por teclado:
+/* a. el valor del lado de un cuadrado para mostrar por pantalla el perímetro del mismo
+b. la base y la altura de un rectángulo para mostrar el área del mismo */
 
-let facturatotal = 0;
-do{
-    let producto = prompt(`Ingrese el nombre del artículo`);
-    let precio = parseFloat(prompt(`Ingrese el precio del artículo`));
-    let cantidad = parseInt(prompt(`Ingrese la cantidad de artículos que desea llevar`));    
-    let total = precio*cantidad;
-    facturatotal += total;
-    console.log(`Debes pagar ${total} por llevar ${cantidad} ${producto}.`);
-}
-while(confirm(`¿Deseas guardar otro artículo?`));
-console.log(`Debes pagar ${facturatotal} en total.`);
+let lado = parseFloat(prompt(`Ingrese el lado del cuadrado en cm`));
+let perimetro = lado*4;
+console.log(`El perimetro del cuadrado es de ${perimetro} cm`);
+
+let base = parseFloat(prompt(`Ingrese la base del rectángulo en cm`));
+let altura = parseFloat(prompt(`Ingrese la altura del rectángulo en cm`));
+let area = base*altura;
+console.log(`El área del rectángulo es de ${area} cm^2`);
