@@ -1,7 +1,19 @@
-// 3. Construir el algoritmo para determinar el voltaje de un circuito a partir de la resistencia y la intensidad de corriente.
+// 4. Construir el algoritmo que solicite el nombre y edad de 3 personas y determine el nombre de la persona con mayor edad.
 
-console.log(`Segun la ley de Ohm El voltaje es V = I * R => (voltaje) = (intensidad) * (resistencia)`);
-let variableR = prompt(`Ingrese el valor de la resistencia en [Ohmios]: `);
-let variableI = prompt(`Ingrese el valor de la intensidad de la corriente en [Amperios]: `);
-let voltaje = variableI * variableR 
-console.log(`El voltaje es ${voltaje} [Voltios]`)
+let nombres = [];
+let edades = [];
+
+for(i = 0; i < 3; i++ ){
+    let nombre = prompt(`Ingrese el nombre: `);
+    let edad = parseInt(prompt(`Ingrese la edad`));
+    nombres.push(nombre);
+    edades.push(edad);
+};
+// Este ciclo for se encarga de solicitar los 3 valores de edad de las personas y de almacenar su edad
+
+console.log(nombres);
+console.log(edades);
+
+let posicionMax = edades.indexOf(Math.max(...edades));
+console.log(`${nombres[posicionMax]} es la persona mayor (Tiene ${edades[posicionMax]} años).`);
+// posicionMax me retorna el valor de la edad mayor, y indexOf un entero con la posición. Como el nombre y la edad tienen la misma posición puedo usar este valor para encontrar el nombre de la persona con la edad mayor. Sé que esto se puede solucionar con objetos (creo) pero aún no veo ese tema.
